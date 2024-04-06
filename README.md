@@ -104,4 +104,7 @@ while True:
 ![Screenshot 2024-04-06 154823](https://github.com/NaliniG007/ChatStudy/assets/144870813/294d2185-d8e9-46f1-9bbe-78ab4092ec06)
 
 ## Result:
+---
 Thus the study on Client Server Chat Applications has been performed.
+
+---
