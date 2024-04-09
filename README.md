@@ -69,8 +69,10 @@ s.bind(('localhost',8000))
 s.listen(5) 
 c,addr=s.accept() 
 while True: 
-    ClientMessage=c.recv(1024).decode() 
-    c.send(ClientMessage.encode())
+            ClientMessage=c.recv(1024).decode() 
+            print("Client > ",ClientMessage) 
+            msg=input("Server > ") 
+            c.send(msg.encode())
 ```
 ## SERVER:
 ```
@@ -80,12 +82,14 @@ s.connect(('localhost',8000))
 while True: 
     msg=input("Client > ") 
     s.send(msg.encode()) 
-    print("Server > ",s.recv(1024).decode())
+    print("Server > ",s.recv(1024).decode()) 
 ```
 ## OUTPUT:
 ## CLIENT:
-![Screenshot 2024-04-06 154854](https://github.com/NaliniG007/ChatStudy/assets/144870813/cc294905-cc26-4e62-8b5e-4104360b2ece)
+![Screenshot 2024-04-09 142045](https://github.com/Saranyaaav/ChatStudy/assets/144870813/6569f69d-c0d6-4219-b1d9-640089d37f14)
+
 ## SERVER:
-![Screenshot 2024-04-06 154823](https://github.com/NaliniG007/ChatStudy/assets/144870813/294d2185-d8e9-46f1-9bbe-78ab4092ec06)
+![Screenshot 2024-04-09 142107](https://github.com/Saranyaaav/ChatStudy/assets/144870813/ffb8bce0-7b40-48ec-b800-d1b048e333aa)
+
 ## Result:
 Thus the study on Client Server Chat Applications has been performed.
